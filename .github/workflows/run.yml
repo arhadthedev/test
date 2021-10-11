@@ -12,7 +12,7 @@ jobs:
       - run: esvu install Chakra
       - run: esvu install engine262
       - run: esvu install GraalJS
-      - run: esvu install Hermes
+ #     - run: esvu install Hermes -- crashes with SIGSEGV
       - run: esvu install JavaScriptCore
       - run: esvu install QuickJS
       - run: esvu install SpiderMonkey
