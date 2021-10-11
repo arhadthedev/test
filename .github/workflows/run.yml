@@ -5,6 +5,10 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          cache: npm
       - run: npm install -g eshost-cli esvu
       - run: esvu --engines
       - run: eshost --configure-esvu
