@@ -19,4 +19,4 @@ jobs:
       - run: esvu install V8
       - run: esvu install XS
       - run: eshost --configure-esvu
-      - run: eshost -te 'Date.parse("-000000-01-01T00:00:00.000Z")'
+      - run: eshost -se 'Date.parse("-000000-01-01T00:00:00.000Z")'
