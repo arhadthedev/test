@@ -9,6 +9,14 @@ jobs:
         with:
           node-version: 16
       - run: npm install -g eshost-cli esvu
-      - run: esvu --engines
+      - run: esvu install Chakra
+      - run: esvu install engine262
+      - run: esvu install GraalJS
+      - run: esvu install Hermes
+      - run: esvu install JavaScriptCore
+      - run: esvu install QuickJS
+      - run: esvu install SpiderMonkey
+      - run: esvu install V8
+      - run: esvu install XS
       - run: eshost --configure-esvu
       - run: eshost -e "Date.parse('-000000-01-01T00:00:00.000Z')"
