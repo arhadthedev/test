@@ -5,7 +5,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - npm install -g eshost-cli esvu
-      - esvu --engines
-      - eshost --configure-esvu
-      - eshost -e "Date.parse('-000000-01-01T00:00:00.000Z')"
+      - run: npm install -g eshost-cli esvu
+      - run: esvu --engines
+      - run: eshost --configure-esvu
+      - run: eshost -e "Date.parse('-000000-01-01T00:00:00.000Z')"
