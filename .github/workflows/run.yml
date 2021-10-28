@@ -12,4 +12,5 @@ jobs:
       - run: esvu --engines=all
       - run: eshost --configure-esvu
       - run: cat $HOME/.eshost-config.json
-      - run: eshost -se 'Date.parse("-000000-01-01T00:00:00.000Z")'
+      - run: echo "/^\\p{White_Space}+$/u.test('\\x20\\xA0')"
+      - run: eshost -se "/^\\p{White_Space}+$/u.test('\\x20\\xA0')"
